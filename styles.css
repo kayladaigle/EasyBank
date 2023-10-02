@@ -1,0 +1,414 @@
+body {
+    font-size: 18px;
+    font-family: 'Public Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    margin:0;
+    color: hsl(233, 26%, 24%);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: hsl(233, 8%, 62%);
+    font-weight:300;
+    font-size: 1rem;
+}
+
+p {
+    color:hsl(233, 8%, 62%);
+    font-weight: 300;
+}
+
+button {
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: 1.2rem;
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    border-style: none;
+    color: white;
+}
+#menuButton {
+    display:none;
+}
+
+.mobileMiddleNav {
+    display: none;
+}
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    padding:20px 0;
+    align-items: center;
+}
+
+.navOption {
+    margin:0;
+}
+
+.navOption a {
+    text-decoration: none;
+    color:hsl(233, 26%, 24%);
+}
+
+.navButton {
+    margin-right: 80px;
+}
+
+.leftNav {
+    margin-left: 80px;
+}
+
+.middleNav ul{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    list-style: none;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#mainHeader {
+    display: flex;
+    flex-direction: row;
+    height:650px;
+    margin-left:80px;
+}
+
+.leftMainHeader {
+    padding-top: 100px;
+}
+
+#intro{
+    position: relative;
+    overflow:hidden;
+    z-index:1;
+}
+
+.gradient {
+    top:-250px;
+    right: -420px;
+    position: absolute;
+    z-index: 2;
+    width: 1200px;
+}
+
+.phones {
+    top:-130px;
+    right:-130px;
+    position: absolute;
+    z-index:3;
+    width: 750px;
+}
+
+#easyBankInfo {
+    background-color: hsl(220, 16%, 96%);
+    padding: 100px 0;
+}
+
+.easyBankBlocks {
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    margin: 0 80px;
+}
+
+.easyBankInfoHeader {
+    margin-left: 80px;
+}
+
+#articleSection{
+    padding:100px 0;
+}
+
+.articlesHeader {
+    margin-left:80px;
+}
+
+.articles {
+    display:flex;
+    flex-direction: row;
+    gap:2.5rem;
+    margin: 0 80px;
+}
+
+.articleImage {
+    width:270px;
+    height:200px;
+}
+
+.article {
+    background-color: white;
+}
+
+#footer {
+    background-color:hsl(233, 26%, 24%) ;
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    padding: 40px 0;
+    justify-content: space-between;
+}
+
+.leftFooter {
+    margin-left: 80px;
+}
+
+.rightFooter {
+    margin-right:80px;
+}
+
+.rightFooter p {
+    font-size: .8rem;
+}
+
+.rightFooter a{
+    color: white;
+}
+
+.rightFooter Button {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.middleFooter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:200px;
+    margin-right: 300px;
+}
+
+.footerOption {
+    color: white;
+    margin-right: 120px;
+    margin-top:20px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap:.8rem;
+}
+
+.footerLogo {
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+/* MOBILE RESPOSIVE */
+
+@media (max-width:1100px) {
+    body {
+        text-align: center;
+        margin:0;
+    }
+
+    button {
+        width:180px;
+    }
+
+    .middleNav ul{
+        display: none;
+    }
+
+    #menuButton {
+        display: block;
+    }
+
+
+    #menuButton:hover + .dropdown {
+        display: block;
+    }
+
+   .dropdown {
+    display:none;
+    list-style: none;
+    background-color: white ;
+    color: (233, 26%, 24%);
+    border-radius: 15px;
+    margin-top: 10px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+   }
+
+   .dropdownContent {
+    text-decoration: none;
+    font-size: 2rem;
+   }
+
+  .leftNav {
+    position: fixed;
+    left:0;
+  }
+
+    .mobileMiddleNav {
+        display: block;
+        list-style: none;
+    }
+
+
+    .navButton {
+        display: none;
+    }
+    
+    
+    #navBar {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        justify-content: right;
+        padding:20px 20px;
+    }
+
+    .phones {
+        position: absolute;
+        z-index:3;
+        width: 300px;
+        left: 50%; /* Center horizontally */
+        top: 70px; /* Center vertically */
+        transform: translate(-50%, -50%);
+    }
+    .gradient {
+        top:-280px;
+        right: -180px;
+        position: absolute;
+        z-index: 2;
+        width: 700px;
+    }
+    #mainHeader {
+        display: flex;
+        flex-direction: column;
+        margin-left:0;
+        height:600px;
+        padding:0 20px;
+    }
+
+    .leftMainHeader {
+        padding-top: 250px;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    
+    h3 {
+        color: hsl(233, 8%, 62%);
+        font-weight:300;
+        font-size: .8rem;
+    }
+    
+    p {
+        color:hsl(233, 8%, 62%);
+        font-weight: 300;
+    }
+
+    #easyBankInfo {
+        padding:0 20px;
+    }
+
+    .easyBankInfoHeader {
+        margin-left: 0;
+    }
+    
+    .easyBankBlocks {
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        margin: 0;
+    }
+
+    .articlesHeader {
+        margin-left:0;
+    }
+    
+    .articles {
+        display:flex;
+        flex-direction: column;
+        gap:2.5rem;
+        margin: 0;
+        padding:0 20px;
+    }
+    
+    .articleImage {
+        width:270px;
+        height:200px;
+    }
+
+    #footer {
+        background-color:hsl(233, 26%, 24%) ;
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        padding: 40px 0;
+        justify-content: space-between;
+    }
+    
+    .leftFooter {
+        margin-left: 0;
+    }
+    
+    .rightFooter {
+        margin-right:0;
+    }
+    
+    .rightFooter p {
+        font-size: .5rem;
+    }
+    
+    .rightFooter a{
+        color: white;
+    }
+    
+    .rightFooter Button {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .middleFooter {
+        display: flex;
+        flex-direction: row;
+        gap:1rem;
+        margin: auto;
+    }
+    
+    .footerOption {
+        color: white;
+        margin-right: 0;
+        margin-top:20px;
+    }
+
+    .socials{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
